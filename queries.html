@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Запросы к изделиям</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Запросы к изделиям</h1>
+
+    <form action="queries.php" method="POST">
+        <h2>Найти изделия, у которых количество деталей больше или равно:</h2>
+        <label for="details_count">Количество деталей:</label>
+        <input type="number" id="details_count" name="details_count"><br>
+        <input type="submit" name="action" value="Найти изделия по количеству деталей">
+    </form>
+
+    <form action="queries.php" method="POST">
+        <h2>Найти названия и трудоемкость изделий, стоимость которых меньше:</h2>
+        <label for="max_cost">Стоимость:</label>
+        <input type="number" id="max_cost" name="max_cost"><br>
+        <input type="submit" name="action" value="Найти изделия по стоимости">
+    </form>
+
+    <form action="queries.php" method="POST">
+        <h2>Найти информацию по изделиям, в названии которых присутствует:</h2>
+        <label for="name_string">Строка в названии:</label>
+        <input type="text" id="name_string" name="name_string"><br>
+        <input type="submit" name="action" value="Найти изделия по названию">
+    </form>
+
+    <form action="queries.php" method="POST">
+        <h2>Обновить стоимость для изделия:</h2>
+        <label for="name_update">Название изделия:</label>
+        <input type="text" id="name_update" name="name_update"><br>
+        <label for="new_cost">Новая стоимость:</label>
+        <input type="number" id="new_cost" name="new_cost"><br>
+        <input type="submit" name="action" value="Обновить стоимость">
+    </form>
+
+    <form action="queries.php" method="POST">
+        <h2>Удалить запись:</h2>
+        <label for="id_delete">ID записи:</label>
+        <input type="number" id="id_delete" name="id_delete"><br>
+        <input type="submit" name="action" value="Удалить запись">
+    </form>
+
+    <br>
+    <a href="index.html">Вернуться на главную</a>
+</body>
+</html>
